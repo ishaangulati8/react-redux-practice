@@ -4,6 +4,11 @@ import './index.css';
 import App from './component/App';
 import { Provider } from 'react-redux'
 import * as serviceWorker from './serviceWorker';
+import store from './store';
+import { addArticle } from './actions/index';
+
+window.store = store;
+window.addArticle = addArticle;
 
 ReactDOM.render(
     <Provider store={store}>
